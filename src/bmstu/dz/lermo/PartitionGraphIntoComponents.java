@@ -30,17 +30,17 @@ public class PartitionGraphIntoComponents {
             verticesQ.getFirst().setQueueMember(true);
             while (!verticesQ.isEmpty()) {
                 for (Vertex i : verticesQ.getFirst().getNeighbors()) {
-                    if (!i.isVisited() && !i.isQueueMember()) {
+                    if (!i.isQueueMember()) {
                         i.setQueueMember(true);
                         verticesQ.addLast(i);
                     }
                 }
                 component.add(verticesQ.getFirst());
-                grVert.remove(verticesQ.getFirst());
-                verticesQ.pop().visit();
+                grVert.remove(verticesQ.pop());
             }
             components.add(component);
         }
+        graph.setVerticesQueueMemberFalse();
         return components;
     }
 

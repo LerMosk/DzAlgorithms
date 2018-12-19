@@ -41,7 +41,7 @@ public class GraphGenerator {
     }
 
     public static void main(String[] args) {
-        GraphGenerator.graphGenerator("test07.dat", 500, 30000);
+        GraphGenerator.graphGenerator("test09.dat", 500, 100);
     }
 }
 

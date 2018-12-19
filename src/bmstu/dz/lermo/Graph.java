@@ -13,7 +13,11 @@ public class Graph {
             graph.add(new Vertex(i));
         }
     }
-
+public void setVerticesQueueMemberFalse(){
+        for(Vertex v:graph){
+            v.setQueueMember(false);
+        }
+}
     public Vertex getVertexFromKey(Integer key) {
 
         return graph.get(key);

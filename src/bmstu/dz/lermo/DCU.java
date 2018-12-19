@@ -34,7 +34,11 @@ public class DCU<T> {
     }
 
     public void union(T data1, T data2) {
-        link(findSet(nodes.get(data1)), findSet(nodes.get(data2)));
+        Node<T> unionElement1=findSet(nodes.get(data1));
+        Node<T> unionElement2=findSet(nodes.get(data2));
+        if(unionElement1!=unionElement2) {
+            link(unionElement1, unionElement2);
+        }
     }
 
     private void link(Node<T> unionElement1, Node<T> unionElement2) {

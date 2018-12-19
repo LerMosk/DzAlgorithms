@@ -5,7 +5,6 @@ import java.util.*;
 public class Vertex {
     private int key;
     private List<Vertex> neighbors = new ArrayList<>();
-    private boolean visited = false;
     private boolean queueMember = false;
 
     public Vertex(int key) {
@@ -20,17 +19,10 @@ public class Vertex {
         return key;
     }
 
-    public boolean isVisited() {
-        return visited;
-    }
-
     public List<Vertex> getNeighbors() {
         return neighbors;
     }
 
-    public void visit() {
-        visited = true;
-    }
 
     public void setQueueMember(boolean queueMember) {
         this.queueMember = queueMember;
